@@ -119,11 +119,9 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return getJobTitle() + " {" +
-                "id='" + employeeId + '\'' +
-                ", name='" + getFullName() + '\'' +
-                ", hired=" + hireDate +
-                ", active=" + active +
-                '}';
+        return getJobTitle() + ": " + getFullName() + " (ID: " + employeeId + ")\n" +
+               "Hire Date: " + hireDate + "\n" +
+               "Status: " + (active ? "Active" : "Inactive") + "\n" +
+               "Years of Service: " + getYearsOfService();
     }
 }

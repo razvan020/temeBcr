@@ -102,6 +102,11 @@ public class Worker extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + " - Skills: " + skills.size() + ", Rating: " + performanceRating + "/5";
+        return super.toString() + "\n" +
+               "Department: " + department + "\n" +
+               "Supervisor: " + supervisor + "\n" +
+               "Skills: " + skills.size() + "\n" +
+               "Performance Rating: " + performanceRating + "/5\n" +
+               "Work Schedule: " + (isShiftWorker ? "Shift Worker (" + currentShift + " shift)" : "Regular Hours");
     }
 }

@@ -85,6 +85,10 @@ public class Captain extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + " - Experience: " + yearsOfExperience + " years, Voyages: " + voyagesCompleted;
+        return super.toString() + "\n" +
+               "Experience: " + yearsOfExperience + " years\n" +
+               "Voyages Completed: " + voyagesCompleted + "\n" +
+               "Licenses: " + licenses.size() + "\n" +
+               "Certifications: " + certifications.size();
     }
 }

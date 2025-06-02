@@ -18,7 +18,7 @@ public class Ship implements Trackable, ContainerManager {
     private final String name;
     private final ShipType type;
     private final int maxContainerCapacity;
-    private final double maxWeightCapacity; // in tonnes
+    private final double maxWeightCapacity;
     private Captain captain;
     private Map<String, Container> containerMap;
     private List<Container> containerList;
@@ -241,16 +241,13 @@ public class Ship implements Trackable, ContainerManager {
 
     @Override
     public String toString() {
-        return "Ship{" +
-                "id='" + shipId + '\'' +
-                ", name='" + name + '\'' +
-                ", type=" + type +
-                ", captain=" + (captain != null ? captain.getFullName() : "None") +
-                ", status=" + currentStatus +
-                ", location='" + currentLocation + '\'' +
-                ", containers=" + containerList.size() + "/" + maxContainerCapacity +
-                ", weight=" + currentWeight + "/" + maxWeightCapacity + " tonnes" +
-                ", inTransit=" + inTransit +
-                '}';
+        return "Ship: " + name + " (ID: " + shipId + ")\n" +
+               "Type: " + type + "\n" +
+               "Captain: " + (captain != null ? captain.getFullName() : "Not assigned") + "\n" +
+               "Status: " + currentStatus + "\n" +
+               "Location: " + currentLocation + "\n" +
+               "Containers: " + containerList.size() + " of " + maxContainerCapacity + " capacity\n" +
+               "Weight: " + currentWeight + " of " + maxWeightCapacity + " tonnes capacity\n" +
+               (inTransit ? "Currently in transit to " + destination : "Not in transit");
     }
 }

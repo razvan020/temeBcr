@@ -166,15 +166,13 @@ public class LoadingArea implements ContainerManager {
 
     @Override
     public String toString() {
-        return "LoadingArea{" +
-                "id='" + loadingAreaId + '\'' +
-                ", name='" + name + '\'' +
-                ", operational=" + operational +
-                ", containers=" + containerList.size() + "/" + maxContainerCapacity +
-                ", workers=" + assignedWorkers.size() +
-                ", refrigeration=" + hasRefrigerationCapability +
-                ", hazardous=" + hasHazardousMaterialCapability +
-                ", oversized=" + hasOversizedCapability +
-                '}';
+        return "Loading Area: " + name + " (ID: " + loadingAreaId + ")\n" +
+               "Status: " + (operational ? "Operational" : "Not Operational") + "\n" +
+               "Containers: " + containerList.size() + " of " + maxContainerCapacity + " capacity\n" +
+               "Workers Assigned: " + assignedWorkers.size() + "\n" +
+               "Special Capabilities: " + 
+               (hasRefrigerationCapability ? "Refrigeration " : "") +
+               (hasHazardousMaterialCapability ? "Hazardous Materials " : "") +
+               (hasOversizedCapability ? "Oversized Cargo" : "");
     }
 }

@@ -216,15 +216,12 @@ public class Port implements ContainerManager {
 
     @Override
     public String toString() {
-        return "Port{" +
-                "id='" + portId + '\'' +
-                ", name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", type=" + type +
-                ", containers=" + containerList.size() + "/" + maxContainerCapacity +
-                ", ships=" + dockedShips.size() + "/" + maxShipCapacity +
-                ", workers=" + workers.size() +
-                ", loadingAreas=" + loadingAreas.size() +
-                '}';
+        return "Port: " + name + " (ID: " + portId + ")\n" +
+               "Location: " + location + "\n" +
+               "Type: " + type + "\n" +
+               "Containers: " + containerList.size() + " of " + maxContainerCapacity + " capacity\n" +
+               "Ships Docked: " + dockedShips.size() + " of " + maxShipCapacity + " capacity\n" +
+               "Workers: " + workers.size() + "\n" +
+               "Loading Areas: " + loadingAreas.size();
     }
 }

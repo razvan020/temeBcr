@@ -30,6 +30,6 @@ public enum ShippingStatus {
 
     @Override
     public String toString() {
-        return status;
+        return status + " - " + description;
     }
 }

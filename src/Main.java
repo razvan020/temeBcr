@@ -307,7 +307,6 @@ public class Main {
                 transferContainerToPort();
                 break;
             case 5:
-                // Return to main menu
                 break;
         }
     }
@@ -551,7 +550,6 @@ public class Main {
         }
     }
 
-    // Container Management Methods
     private static void viewAllContainers() {
         System.out.println("\nAll Containers:");
         if (containers.isEmpty()) {
@@ -678,7 +676,6 @@ public class Main {
         System.out.println("Volume: " + selectedContainer.getVolume() + " cubic meters");
     }
 
-    // Cargo Management Methods
     private static void viewAllCargo() {
         System.out.println("\nAll Cargo:");
         if (cargos.isEmpty()) {
@@ -1009,7 +1006,6 @@ public class Main {
         System.out.println("Worker " + selectedWorker.getFullName() + " bonus: $" + bonus);
     }
 
-    // Tracking Methods
     private static void trackShip() {
         if (ships.isEmpty()) {
             System.out.println("\nNo ships available. Please create a ship first.");

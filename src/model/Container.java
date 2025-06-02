@@ -149,14 +149,12 @@ public class Container implements Trackable {
 
     @Override
     public String toString() {
-        return "Container{" +
-                "id='" + containerId + '\'' +
-                ", type=" + type +
-                ", status=" + currentStatus +
-                ", location='" + currentLocation + '\'' +
-                ", cargo count=" + cargoList.size() +
-                ", weight=" + currentWeight + "/" + maxWeightCapacity + " tonnes" +
-                ", sealed=" + isSealed +
-                '}';
+        return "Container: " + type + " (ID: " + containerId + ")\n" +
+               "Status: " + currentStatus + "\n" +
+               "Location: " + currentLocation + "\n" +
+               "Cargo Items: " + cargoList.size() + "\n" +
+               "Weight: " + currentWeight + " of " + maxWeightCapacity + " tonnes capacity\n" +
+               "Dimensions: " + length + "m x " + width + "m x " + height + "m\n" +
+               "Security: " + (isSealed ? "Sealed" : "Unsealed");
     }
 }

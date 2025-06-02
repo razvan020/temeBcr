@@ -137,14 +137,16 @@ public class Cargo implements Trackable {
 
     @Override
     public String toString() {
-        return "Cargo{" +
-                "id='" + cargoId + '\'' +
-                ", description='" + description + '\'' +
-                ", weight=" + weight + " tonnes" +
-                ", status=" + currentStatus +
-                ", location='" + currentLocation + '\'' +
-                ", sender='" + sender + '\'' +
-                ", recipient='" + recipient + '\'' +
-                '}';
+        return "Cargo: " + description + " (ID: " + cargoId + ")\n" +
+               "Status: " + currentStatus + "\n" +
+               "Location: " + currentLocation + "\n" +
+               "Weight: " + weight + " tonnes, Volume: " + volume + " cubic meters\n" +
+               "From: " + sender + "\n" +
+               "To: " + recipient + " at " + destinationAddress + "\n" +
+               "Properties: " + 
+               (hazardous ? "Hazardous " : "") +
+               (fragile ? "Fragile " : "") +
+               (perishable ? "Perishable" : "") +
+               (perishable && expiryDate != null ? " (Expires: " + expiryDate + ")" : "");
     }
 }
